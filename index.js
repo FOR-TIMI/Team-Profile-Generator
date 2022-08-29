@@ -6,7 +6,7 @@ const Employee = require('./lib/Employee');
 
 
 function init(){
-    const managerQuestions = new Manager().questions();
+    const managerQuestions = new Manager().getQuestions();
     const app = {}
     app.setManagerData = function(){
         inquirer
