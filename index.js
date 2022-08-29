@@ -1,47 +1,32 @@
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
+const Employee = require('./lib/Employee');
+
 
 
 
 function init(){
-   
+    const managerQuestions = new Manager().questions();
     const app = {}
     app.setManagerData = function(){
-        const questions = new Manager('chris',1234124,'chris@ym.com',21412)
-        var props = Object.getOwnPropertyNames(questions);
-        // const props = Object.getOwnPropertyNames(role);
+        inquirer
+        .prompt(managerQuestions)
+        .then(answers => {
+            const {id, name, email,officeNumber} = answers
 
-        //loop through arguments
-    
-        //set property to the argument
-        for(let property of props){
-            Manager[property] = property
-        }
+            //create a new manager Instance
+            const manager = new Manager(name,id,email,officeNumber)
 
-        console.log(questions)
-        
+            //To create a new employee card for the manager
+            manager.createEmployeeCard();
 
-        // inquirer
-        // .prompt(questions())
-        // .then(answers => {
-        //       const {id, name, email,officeNumber} = answers
-        //       manager.id = id;
-        //       manager.name = name;
-        //       manager.email = email;
-        //       manager.officeNumber = officeNumber;
-        //       manager.role = manager.getRole();
- 
-        //       manager.addEmployee();
-        //     })
+            //To add a new employee
+            manager.addEmployee()
+        })
+
     }
     app.setManagerData();
-
 }
-
-
-
-
-
 
 init();
 
