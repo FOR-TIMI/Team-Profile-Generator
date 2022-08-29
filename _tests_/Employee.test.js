@@ -1,17 +1,22 @@
 const Employee = require('../lib/Employee')
 
-const tess = new Employee('tess',114256,'tess@gmail.com');
+
 
 
 test('checks if the name exists ', () => {
+  const tess = new Employee('tess',114256,'tess@gmail.com');
     expect(tess.getName()).toBe('tess');
-  });
-test('checks if the id exists and is the same as the id passed in ', () => {
     expect(tess.getId()).toBe(114256);
-  });
-test('checks if the email is the same as the email passed in ', () => {
     expect(tess.getEmail()).toBe('tess@gmail.com');
-  });
-test('checks if the email is the same as the email passed in ', () => {
     expect(tess.getRole()).toBe('Employee');
   });
+
+  test('checks if the name exists ', () => {
+    const tom = new Employee('tom',11332567,'tom@gmail.com');
+      expect(tom.getName()).toBe('tom');
+      expect(tom.getId()).toBe(11332567);
+      expect(tom.getEmail()).toBe('tom@gmail.com');
+      expect(tom.getRole()).toBe('Employee');
+    });
+
+
