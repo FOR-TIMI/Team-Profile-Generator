@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 function setFileHtml(data){
     return `${data}`
 }

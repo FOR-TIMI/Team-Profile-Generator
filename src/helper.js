@@ -2,7 +2,6 @@ const Manager = require("../lib/Manager");
 const Intern = require("../lib/Intern");
 const Engineer = require("../lib/Engineer");
 const classes = { Intern, Engineer,Manager};
-const fs = require('fs');
 
 
 
@@ -35,16 +34,7 @@ function setData(role){
 
 }
 
-function setFileHtml(data){
-    return `${data}`
-}
 
-       
-function appendToFile(data){
-  fs.appendFile('team.html',data,(err) =>{
-    console.log(err)
-  })
-};  
 
 
 
