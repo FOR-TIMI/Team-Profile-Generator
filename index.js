@@ -25,7 +25,6 @@ function init(){
     }
     app.setManagerData();
 }
-
 init();
 
 
