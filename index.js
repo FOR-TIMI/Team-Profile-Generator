@@ -18,7 +18,7 @@ function init(){
             const manager = new Manager(name,id,email,officeNumber)
 
             //To create a new employee card for the manager
-            manager.createEmployeeCard();
+            manager.createCard(manager);
 
             //To add a new employee
             manager.addEmployee()
