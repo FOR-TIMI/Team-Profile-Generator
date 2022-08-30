@@ -4,7 +4,7 @@ function setFileHtml(data){
 
        
 function appendToFile(data){
-  fs.appendFile('team.html',data,(err) =>{
+  fs.appendFile('../dist/teams.html',data,(err) =>{
     console.log(err)
   })
 };  
