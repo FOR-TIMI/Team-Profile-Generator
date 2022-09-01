@@ -1,24 +1,112 @@
-body {
-  background: #f4f4f4;
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');
 }
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
-nav section {
+body {
+  background: #E2E9FC;
+  font-family: Montserrat;
+}
+header {
+  position: absolute;
+  top: 50px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+header nav {
+  display: flex;
+  position: fixed;
+  width: 80%;
+  height: 50px;
+  margin: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  margin-left: 40px;
+}
+header nav ul li a {
+  transition: all ease 0.3s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+  padding: 0 0 5px 0;
+  border-bottom: 3px solid #570861;
+  transform: translateY(-10%);
+}
+header nav a {
+  text-decoration: none;
+  color: #570861;
+}
+.navigation {
+  position: fixed;
+  right: 6%;
+  list-style: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navigation li {
+  width: 10px;
+  height: 10px;
+  border: 2.5px solid #570861;
+  border-radius: 50%;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navigation li:hover,
+.navigation li.selected {
+  transform: scale(1.4);
+}
+.fully-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
   width: 100%;
-  min-height: 100vh;
-  border: 1px solid black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nav-item .active {
-  background-color: #fff;
-  border-bottom: 3px solid black ;
+section div {
+  font-size: 40px;
 }
-/* 
-.navbar{
-    position: fixed;
-
-} */
+#engineer {
+  background: #fff;
+}

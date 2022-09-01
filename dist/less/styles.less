@@ -1,31 +1,116 @@
-@background-color:#f4f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@background-color:#E2E9FC;
+@font-family: Montserrat;
+@primary-color: #570861;
+@secondary-color:#E2E9FC;
+@secondary-background-color: #fff;
 
-body{
-    background: @background-color;
-}
+
+
 
 
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-nav
+body{
+    background: @background-color;
+    font-family: @font-family;
+}
 
-section{
+
+// header section 
+header{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    .fully-centered();
+    // Navbar section
+    nav{
+        display: flex;
+        position: fixed;
+        width: 80%;
+        height: 50px;
+        margin: 30px;
+        justify-content: space-between;
+        align-items: center;
+
+
+        ul{
+            display: flex;
+            list-style: none;
+            li{
+                margin-left: 40px;
+                
+
+           a{
+            transition: all ease 0.3s;
+            
+            &:hover,&.active{
+                padding: 0 0 5px 0;
+                border-bottom: 3px solid @primary-color;
+                transform: translateY(-10%);
+            }
+           }
+
+
+            }
+
+        }
+        a{
+            text-decoration: none; 
+            color: @primary-color;
+         }
+    
+    }
+
+
+}
+
+
+// Three dots for navigation 
+.navigation{
+    position: fixed;
+    right: 6%;
+    list-style: none;
+    top: 50%;
+    transform: translateY(-50%);
+
+    li{
+        width: 10px;
+        height: 10px;
+        border: 2.5px solid @primary-color;
+        border-radius: 50%;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+    
+        &:hover,&.selected{
+            transform: scale(1.4);
+        }
+    
+    }
+}
+
+.fully-centered{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    border: 1px solid black;
 }
-.nav-item .active{
-    background-color: #fff;
-    border-bottom: 3px solid black ;
-}
-/* 
-.navbar{
-    position: fixed;
 
-} */
+section{
+    width: 100%;
+    height: 100vh;
+    .fully-centered();
+
+    div{
+        font-size: 40px;
+        
+    } 
+}
+
+#engineer{
+    background: @secondary-background-color;
+}
