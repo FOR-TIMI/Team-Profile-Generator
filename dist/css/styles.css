@@ -34,6 +34,7 @@
 body {
   background: #E2E9FC;
   font-family: Montserrat;
+  color: #570861;
 }
 header {
   position: absolute;
@@ -108,9 +109,63 @@ section {
   justify-content: center;
   align-items: center;
 }
-section div {
-  font-size: 40px;
+section h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
 }
-#engineer {
+#manager h2 {
+  margin-bottom: 70px;
+}
+#manager .card {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+#manager .card-img {
+  width: 357px;
+  height: 399px;
+  background-color: #fff;
+  background-image: url('https://img.freepik.com/free-vector/organization-abstract-concept_335657-3015.jpg?w=740&t=st=1662021506~exp=1662022106~hmac=4d1ee77ded81984d8bae611d91528d0a70a05d2b66ca4dcaa784405cf5e9d3b7');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-top-left-radius: 30px;
+}
+#manager .card-info {
+  width: 499px;
+  height: 300px;
+  background-color: #b8c2df;
+  border-top-right-radius: 30px;
+}
+#manager .card-info li {
+  list-style: none;
+  padding: 15px;
+  background-color: #E2E9FC;
+  margin: 20px 20px;
+  border-radius: 7px;
+}
+#manager .card-info li span {
+  font-weight: 600;
+  margin-right: 15px;
+}
+#engineer .card,
+#intern .card {
+  width: 320px;
+  height: 373px;
+  border: 1px solid black;
+}
+#engineer .card-img,
+#intern .card-img {
+  width: 258px;
+  height: 196px;
+  background-color: #570861;
+  position: relative;
+}
+#engineer .card-body,
+#intern .card-body {
+  border: 1px solid red;
+}
+section:nth-child(2) {
   background: #fff;
 }
