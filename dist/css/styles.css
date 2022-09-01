@@ -72,6 +72,10 @@ header nav a {
   text-decoration: none;
   color: #570861;
 }
+header nav a.logo {
+  font-size: 30px;
+  font-weight: 500;
+}
 .navigation {
   position: fixed;
   right: 6%;
