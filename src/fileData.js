@@ -27,6 +27,8 @@ let filepath = path.join(__dirname,'../dist/teams.html');
     
 // }
 
+
+
        
 function appendToFile(data){
   fs.appendFileSync(filepath,data,(err) =>{
