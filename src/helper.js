@@ -1,38 +1,53 @@
-const Manager = require("../lib/Manager");
-const Intern = require("../lib/Intern");
-const Engineer = require("../lib/Engineer");
-const classes = { Intern, Engineer,Manager};
+
+const fs = require('fs');
+const path = require('path');
+let filepath = path.join(__dirname,'../dist/teams.html');
 
 
+function init(){
+    const app = {};
 
-function setData(role){
-    try{
-        //creating a new dynamic employee based on their role
-        role = classes[role]
-        
-        //Create a new employee instance
-        const Employee = new role()
+    // [
+    //     Manager {
+    //       name: 'lisa',
+    //       id: '121412',
+    //       email: 'lisa@gmail.com',
+    //       officeNumber: '1412'
+    //     },
+    //     Engineer {
+    //       name: 'dfgsefd',
+    //       id: '12341234',
+    //       email: 'asdfgsdfgh',
+    //       github: 'FOR-TIMI'
+    //     },
+    //     Intern {
+    //       name: 'chris',
+    //       id: '11456568',
+    //       email: 'chris@gmail.com',
+    //       school: 'university of toronto'
+    //     }
+    //   ]
 
-
-        //to get all the properties of the new employee depending on their role
-        const props = Object.getOwnPropertyNames(Employee);
-
-
-        //set all properties of the new employee to it argument
-        props.forEach((property,i) => {
-        Employee[property] = arguments[i+1]
-            })
-
-            console.log(Employee)
-
-           
+    app.setHtmlMarkup = function(obj){
+     
     }
-    catch(e){
-        console.log('Only Managers can add new employees',e)
+
+    app.createHtmlFile = function(data){
+        fs.writeFile(filepath,data,(err) =>{
+            if(err) throw err;
+            console.log('Team html file generated')
+          }).then(() => {
+            
+          })
     }
-    
+
 
 }
+
+
+
+
+
 
 
 

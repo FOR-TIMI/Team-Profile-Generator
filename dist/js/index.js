@@ -14,7 +14,7 @@ window.addEventListener('scroll', function(){
         //check if the offset top is less than the scroll top
 
       let top = window.scrollY;
-      let offset = section.offsetTop - 300;
+      let offset = section.offsetTop - 350;
       let height= section.offsetHeight;
       let id = section.getAttribute('id');
 
@@ -35,7 +35,7 @@ window.addEventListener('scroll', function(){
 document.querySelectorAll('.navigation li').forEach((li,i) => {
     li.addEventListener('click', ()=>{
       window.scrollTo({
-        top: i * windowHeight,
+        top: i * window.innerHeight,
         behavior: "smooth"
       })
     })

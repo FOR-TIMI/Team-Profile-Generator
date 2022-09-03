@@ -7,6 +7,8 @@ const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+//To import helper function
+const {createFiles} = require('./src/helper')
 
 function init(){
     const app = {}
@@ -30,7 +32,7 @@ function init(){
 
             //Add manager to the list of employees
             allEmployees.push(manager)
-            console.log(allEmployees)
+            console.log(allEmployees[0].getRole(), allEmployees[0].officeNumber)
 
             //To add a new employee
             this.addEmployee()
@@ -63,7 +65,7 @@ function init(){
             default: true,
           }])
         .then((answers) => {
-               answers.addEmployee && this.promptEmployeeList()
+               answers.addEmployee ? this.promptEmployeeList() : createFiles(allEmployees);
             })
      }
 
