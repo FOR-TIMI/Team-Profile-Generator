@@ -149,23 +149,100 @@ section h2 {
   font-weight: 600;
   margin-right: 15px;
 }
+#engineer .container,
+#intern .container {
+  width: 80%;
+}
+#engineer h2,
+#intern h2 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+#engineer .row,
+#intern .row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 #engineer .card,
 #intern .card {
-  width: 320px;
+  width: 300px;
   height: 373px;
-  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #engineer .card-img,
 #intern .card-img {
-  width: 258px;
-  height: 196px;
+  width: 90%;
+  height: 50%;
   background-color: #570861;
-  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 #engineer .card-body,
 #intern .card-body {
-  border: 1px solid red;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
 }
-section:nth-child(2) {
+#engineer .card-body .card-title,
+#intern .card-body .card-title {
+  font-weight: 600;
+  padding: 5px;
+}
+#engineer .card-info,
+#intern .card-info {
+  width: 100%;
+  height: 100%;
+}
+#engineer .card-info li,
+#intern .card-info li {
+  list-style: none;
+  padding: 6px;
+  margin: 10px 10px;
+  border-radius: 5px;
+}
+#engineer .card-info li span,
+#intern .card-info li span {
+  margin-right: 5px;
+}
+#engineer {
   background: #fff;
+}
+#engineer .card-title {
+  color: #E2E9FC;
+}
+#engineer .card {
+  background-color: #767CC5;
+}
+#engineer .card .card-img {
+  background-image: url('https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?w=996&t=st=1662193451~exp=1662194051~hmac=9531d620ce969e97ac18ea0ba08f909d9dc65044eb7a1aaede381f4c16293adb');
+  background-position: center;
+  background-size: contain;
+}
+#engineer .card .card-info {
+  background-color: #767CC5;
+}
+#engineer .card .card-info li {
+  background-color: #E2E9FC;
+}
+#intern .card {
+  background-color: #949FFE;
+}
+#intern .card .card-img {
+  background-image: url('https://img.freepik.com/free-vector/internship-job-illustration_23-2148722413.jpg?w=740&t=st=1662194393~exp=1662194993~hmac=6753de134371ce2782447d0dd59dca48241f01da497f81962383ac028e94a6fd');
+  background-position: top;
+  background-size: cover;
+}
+#intern .card li {
+  background-color: #fff;
 }
