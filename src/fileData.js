@@ -41,6 +41,10 @@ function setJsonData(data){
   return JSON.stringify(data)
 }
 
+function createManager(name,id,email,officeNumber){
+  return new Manager(name,id,email,officeNumber)
+}
+
 function saveData(data){
   const dataText = setJsonData(data) 
  fs.appendFileSync(jsonfilepath,dataText,err =>{
@@ -51,5 +55,6 @@ function saveData(data){
 module.exports = {
  
     appendToFile,
-    saveData
+    saveData,
+    createManager
 }
