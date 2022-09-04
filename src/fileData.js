@@ -327,6 +327,7 @@ function setInnerCss(){
 }
 
 function setJavaScript(){
+  
     return `const sections = document.querySelectorAll('section');
     const navigation = document.querySelector('.navigation');
     const navLinks = document.querySelectorAll('header nav a');
@@ -345,12 +346,11 @@ function setJavaScript(){
           let top = window.scrollY;
           let offset = section.offsetTop - 350;
           let height= section.offsetHeight;
-          let id = section.getAttribute('id');
     
           if(top >= offset && top < offset + height){
             navLinks.forEach(link => {
               link.classList.remove('active');
-              document.querySelector('header nav a[href*=\""+ id + "\"]').classList.add('active');
+              document.querySelector('header nav a[href*=' +section.getAttribute('id')).classList.add('active');
             })
             navigation.children[i].classList.add('selected')
           }
@@ -432,8 +432,6 @@ function createCard(employee){
         ${employee.github ? `<li><span>Github:</span><a href="https://github.com/${employee.github}">${employee.github}</a></li>` : '<li><span>School:</span>uofT</li>'}
       </ul>
     </div>
-  </div>
- 
  </div>`
  }
 

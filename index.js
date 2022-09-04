@@ -35,7 +35,7 @@ function init(){
             
 
             //To add a new employee
-            this.addEmployee()
+            this.promptEmployeeList()
         })
 
     }
