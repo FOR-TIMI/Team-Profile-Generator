@@ -1,5 +1,4 @@
 
-
 function setInnerHTML(data){
     return `
 <!doctype html>
@@ -39,7 +38,7 @@ function setInnerHTML(data){
     <main class="container">
 
 
-        ${setManagerHTML(data[0])}
+        ${setManagerHTML(data)}
       
         <section id="engineer">
           <div class="container">
@@ -351,7 +350,7 @@ function setJavaScript(){
           if(top >= offset && top < offset + height){
             navLinks.forEach(link => {
               link.classList.remove('active');
-              document.querySelector(header nav a[href*=${id}]).classList.add('active');
+              document.querySelector('header nav a[href*=${id}]').classList.add('active');
             })
             navigation.children[i].classList.add('selected')
           }
@@ -374,15 +373,16 @@ function setJavaScript(){
     `
 }
 
-function setManagerHTML(managerData){
+function setManagerHTML(data){
 
+    managerData = data[0];
 
     let name = managerData.getName();
     let id = managerData.getId();
     let email = managerData.getEmail();
     let role = managerData.getRole();
     let officeNumber = managerData.officeNumber;
-
+    let html = ''
 
          
     return`
@@ -404,6 +404,7 @@ function setManagerHTML(managerData){
     `
 
 
+
 }
 
 
@@ -411,7 +412,7 @@ function setOtherEmployeeHTML(data,role){
   let html = ''
 
   data.forEach(employee =>{
-    if(data.getRole() === role){
+    if(employee.getRole() === role){
       html += createCard(employee);
     }
   })

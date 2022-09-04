@@ -8,7 +8,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 //To import helper function
-const {createFiles} = require('./src/helper')
+const {createTeams} = require('./src/helper')
 
 function init(){
     const app = {}
@@ -32,7 +32,7 @@ function init(){
 
             //Add manager to the list of employees
             allEmployees.push(manager)
-            console.log(allEmployees[0].getRole(), allEmployees[0].officeNumber)
+            
 
             //To add a new employee
             this.addEmployee()
@@ -65,7 +65,7 @@ function init(){
             default: true,
           }])
         .then((answers) => {
-               answers.addEmployee ? this.promptEmployeeList() : createFiles(allEmployees);
+               answers.addEmployee ? this.promptEmployeeList() : createTeams(allEmployees);
             })
      }
 
@@ -84,7 +84,6 @@ function init(){
         
         //To add the newly created instance of the engineer to the array
         allEmployees.push(engineer)
-        console.log(allEmployees)
 
         
         //To go back to add employee options
