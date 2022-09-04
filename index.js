@@ -8,8 +8,9 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 //To import helper function
-const {createTeams} = require('./src/helper')
+const {createTeams} = require('./src/Teams')
 
+//To initiallize the application
 function init(){
     const app = {}
 
@@ -35,7 +36,7 @@ function init(){
             
 
             //To add a new employee
-            this.promptEmployeeList()
+            this.addEmployee()
         })
 
     }

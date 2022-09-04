@@ -1,20 +1,26 @@
 
+// import file system module 
 const fs = require('fs');
+
+//import path module
 const path = require('path');
-const {setInnerCss, setInnerHTML, setJavaScript} = require('./fileData')
 
+// Importing all texts from the text.js file 
+const {setInnerCss, setInnerHTML, setJavaScript} = require('./Texts')
 
+//to create the teams html, css, js folders and set the inner html,css and js
 function createTeams(employeeData){
     const app = {};
     
     app.data = employeeData
-
+ 
+    // initializing the creation of the html file and assets folder 
     app.createFiles = function(){
          this.createHTMLfile();
          this.createAssetsFolder();
     }
 
-
+    //To create assets folder
     app.createAssetsFolder = function(){
         return fs.mkdir(path.join(__dirname, '../dist/assets'), (err) => {
             if(err) throw new Error('error',err);
@@ -42,8 +48,6 @@ function createTeams(employeeData){
         })
     
     }
-
-
    
     //To create the index.html file and set inner HTML
     app.createHTMLfile = function(){

@@ -1,4 +1,5 @@
 
+//To set innerHTML dynamically and return a string
 function setInnerHTML(data){
     return `
 <!doctype html>
@@ -73,6 +74,7 @@ function setInnerHTML(data){
     `
 }
 
+// returns a string for css contents 
 function setInnerCss(){
     return `@font-face {
       font-family: 'Montserrat';
@@ -325,6 +327,7 @@ function setInnerCss(){
     `
 }
 
+// returns a string of the javascript
 function setJavaScript(){
   
     return `const sections = document.querySelectorAll('section');
@@ -372,6 +375,7 @@ function setJavaScript(){
     `
 }
 
+//returns a string of the inner html of the manager
 function setManagerHTML(data){
 
     managerData = data[0];
@@ -406,6 +410,7 @@ function setManagerHTML(data){
 
 }
 
+//returns a string of the inner html of the Intern or Engineer
 function setOtherEmployeeHTML(data,role){
   let html = ''
 
@@ -417,6 +422,7 @@ function setOtherEmployeeHTML(data,role){
 return html;
 }
 
+//creates a html card for any employee
 function createCard(employee){
     return `<div class="card">
     <div class="card-img"></div>
