@@ -1,32 +1,14 @@
 
 const fs = require('fs');
 const path = require('path');
-// let filepath = path.join(__dirname,'../dist/teams.html');
+const {setInnerCss, setInnerHTML, setJavaScript} = require('./fileData')
+
+
+
 
 
 function init(){
     const app = {};
-
-    // [
-    //     Manager {
-    //       name: 'lisa',
-    //       id: '121412',
-    //       email: 'lisa@gmail.com',
-    //       officeNumber: '1412'
-    //     },
-    //     Engineer {
-    //       name: 'dfgsefd',
-    //       id: '12341234',
-    //       email: 'asdfgsdfgh',
-    //       github: 'FOR-TIMI'
-    //     },
-    //     Intern {
-    //       name: 'chris',
-    //       id: '11456568',
-    //       email: 'chris@gmail.com',
-    //       school: 'university of toronto'
-    //     }
-    //   ]
 
     app.setHtmlMarkup = function(obj){
      
@@ -67,28 +49,27 @@ function init(){
    
     //To create the index.html file and set inner HTML
     app.createHTMLfile = function(data){
-        return fs.writeFile(path.join(__dirname, '../dist/app.html'),'i love you', err =>{
+        return fs.writeFile(path.join(__dirname, '../dist/app.html'),setInnerHTML(data), err =>{
                  if(err) throw new Error('error',err)
         })
     }
 
     //To create the javascript file
     app.createJsFile = function(){
-        fs.writeFile(path.join(__dirname, '../dist/assets/js/index.js'), 'tj', err =>{
+        fs.writeFile(path.join(__dirname, '../dist/assets/js/index.js'), setJavaScript(), err =>{
             if(err) throw new Error('error',err); 
         })
     }
 
     //To create css file
     app.makeCssFile = function(){
-        fs.writeFile(path.join(__dirname, '../dist/assets/css/styles.css'), 'tj', err =>{
+        fs.writeFile(path.join(__dirname, '../dist/assets/css/styles.css'), setInnerCss(), err =>{
             if(err) throw new Error('error',err); 
         })
     
     }
 
     app.createFiles();
-
 
 }
 
