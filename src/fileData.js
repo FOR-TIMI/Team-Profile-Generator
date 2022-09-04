@@ -73,7 +73,6 @@ function setInnerHTML(data){
     `
 }
 
-
 function setInnerCss(){
     return `@font-face {
       font-family: 'Montserrat';
@@ -407,7 +406,6 @@ function setManagerHTML(data){
 
 }
 
-
 function setOtherEmployeeHTML(data,role){
   let html = ''
 
@@ -419,7 +417,6 @@ function setOtherEmployeeHTML(data,role){
 return html;
 }
 
-
 function createCard(employee){
     return `<div class="card">
     <div class="card-img"></div>
@@ -429,7 +426,7 @@ function createCard(employee){
         <li><span>ID:</span> ${employee.id}</li>
         <li><span>Name:</span>${employee.name}</li>
         <li><span>Email:</span> <a href="mailto:${employee.email}">${employee.email}</a></li>
-        ${employee.github ? `<li><span>Github:</span><a href="https://github.com/${employee.github}">${employee.github}</a></li>` : '<li><span>School:</span>uofT</li>'}
+        ${employee.github ? `<li><span>Github:</span><a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a></li>` : '<li><span>School:</span>uofT</li>'}
       </ul>
     </div>
  </div>`
