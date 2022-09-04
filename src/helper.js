@@ -19,10 +19,19 @@ function createTeams(employeeData){
         return fs.mkdir(path.join(__dirname, '../dist/assets'), (err) => {
             if(err) throw new Error('error',err);
         
-             this.makeJsFolder();
-             this.makeCssFolder();
+            this.makeCssFolder(); 
+            this.makeJsFolder();
+             
     })
 
+    }
+
+    //To create the css folder
+    app.makeCssFolder = function(){
+        fs.mkdir(path.join(__dirname, '../dist/assets/css'), (err) => {
+            if(err) throw new Error('error',err);
+             this.makeCssFile()
+            })
     }
 
     //To create JS folder
@@ -34,13 +43,7 @@ function createTeams(employeeData){
     
     }
 
-    //To create the css folder
-    app.makeCssFolder = function(){
-        fs.mkdir(path.join(__dirname, '../dist/assets/css'), (err) => {
-            if(err) throw new Error('error',err);
-             this.makeCssFile()
-            })
-    }
+
    
     //To create the index.html file and set inner HTML
     app.createHTMLfile = function(){

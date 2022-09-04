@@ -350,7 +350,7 @@ function setJavaScript(){
           if(top >= offset && top < offset + height){
             navLinks.forEach(link => {
               link.classList.remove('active');
-              document.querySelector('header nav a[href*=${id}]').classList.add('active');
+              document.querySelector('header nav a[href*=\""+ id + "\"]').classList.add('active');
             })
             navigation.children[i].classList.add('selected')
           }
@@ -424,7 +424,7 @@ function createCard(employee){
     return `<div class="card">
     <div class="card-img"></div>
     <div class="card-body">
-      <div class="card-title">${employee['card-title']}</div>
+      <div class="card-title">${employee.getRole()}</div>
       <ul class="card-info">
         <li><span>ID:</span> ${employee.id}</li>
         <li><span>Name:</span>${employee.name}</li>
