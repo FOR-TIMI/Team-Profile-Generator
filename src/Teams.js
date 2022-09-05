@@ -22,6 +22,8 @@ function createTeams(employeeData){
 
     //To create assets folder
     app.createAssetsFolder = function(){
+
+        //To check if the assets folder already exists
         if(!fs.existsSync(path.join(__dirname, '../dist/assets'))){
         return fs.mkdir(path.join(__dirname, '../dist/assets'), (err) => {
             if(err) throw new Error('Couldn\'t create assets folder',err);
@@ -33,15 +35,6 @@ function createTeams(employeeData){
 
     }
 
-    // if(!(fs.access(path.join(__dirname, '../dist/assets/css')), (err) => {
-    //     if(err){
-    //         fs.mkdir(path.join(__dirname, '../dist/assets/css', err => {
-    //             if(err) throw new Error('Couldn\'t create assets folder', err)
-    //             this.makeCssFile()
-    //         })
-        
-    
-    // )}
 
     //To create the css folder
     app.makeCssFolder = function(){
