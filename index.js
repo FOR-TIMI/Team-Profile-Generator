@@ -108,7 +108,6 @@ function init(){
             
             //To add the newly created intern to the employee list or array
            allEmployees.push(intern)
-           console.log(allEmployees)
           
 
             //To go back to add employee options
