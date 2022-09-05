@@ -1,0 +1,37 @@
+# Team-Profile-Generator--OOP
+
+
+
+## Purpose
+This is a command line Interface that accepts user input and generates a nicely formatted team roster based on user input
+
+
+## Usage
+
+* when the user starts the application,the user is prompted to enter the team manager’s name, employee ID, email address, and office number
+* when the user enters the team manager’s name, employee ID, email address, and office number, the user is presented with a menu with the option to add an engineer or an intern or to finish building my team.
+* If the engineer option is selected, the user is prompted to enter the engineer’s name, ID, email, and GitHub username, and taken back to the menu.
+* If the intern option is selected, the user is prompted to enter the intern’s name, ID, email, and school, and taken back to the menu.
+* when the user desides to finish building my team by selecting no in the add employee prompt, I exit the application, and the HTML is generated.
+* when a user is for my team members and their information, an HTML file is generated based on user input.
+* when a user clicks on their email address in the HTML, their default email program opens and populates the TO field of the email with the address
+* when you click the github user name of engineers, that GitHub profile opens in a new tab.
+
+
+
+
+
+## Built With
+* NodeJs
+* HTML
+* CSS
+* JavaScript
+* Inquirer Package
+* LESS css preprocessor
+* Jest 
+
+
+## Screenshots
+![image](https://user-images.githubusercontent.com/104241247/188397294-b207de93-ca77-4d9c-a614-61e0153ca457.png)
+![image](https://user-images.githubusercontent.com/104241247/188397346-b6a27331-fc60-4987-8f83-f3677fd3255d.png)
+![image](https://user-images.githubusercontent.com/104241247/188397403-992c830c-07bc-4927-9c1b-9f30921451bc.png)
