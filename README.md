@@ -3,10 +3,7 @@
 
 
 ## Purpose
-This is a command line Interface that accepts user input and generates a nicely formatted team roster based on user input
-
-
-## Usage
+This is a command line Application that accepts user input and generates a nicely formatted team roster based on user input
 
 * when the user starts the application,the user is prompted to enter the team manager’s name, employee ID, email address, and office number
 * when the user enters the team manager’s name, employee ID, email address, and office number, the user is presented with a menu with the option to add an engineer or an intern or to finish building my team.
@@ -19,6 +16,31 @@ This is a command line Interface that accepts user input and generates a nicely 
 
 
 
+## Project setup
+
+1. Install Node
+
+2. Clone this repo
+```
+git clone https://github.com/FOR-TIMI/Team-Profile-Generator--OOP.git
+```
+3. Install all the dependencies of this repo by run in the terminal
+```
+npm i
+```
+4. To start using the application, run in the terminal
+```
+node index.js
+```
+
+## Tests
+
+To run tests for this application with jest run in the terminal
+```
+npm test
+```
+
+   
 
 
 ## Built With
