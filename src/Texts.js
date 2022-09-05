@@ -380,10 +380,10 @@ function setManagerHTML(data){
 
     managerData = data[0];
 
-    let name = managerData.getName();
+    let name = managerData.getName().trim();
     let id = managerData.getId();
-    let email = managerData.getEmail();
-    let role = managerData.getRole();
+    let email = managerData.getEmail().trim();
+    let role = managerData.getRole().trim();
     let officeNumber = managerData.officeNumber;
     let html = ''
 
@@ -430,9 +430,9 @@ function createCard(employee){
       <div class="card-title">${employee.getRole()}</div>
       <ul class="card-info">
         <li><span>ID:</span> ${employee.id}</li>
-        <li><span>Name:</span>${employee.name}</li>
-        <li><span>Email:</span> <a href="mailto:${employee.email}">${employee.email}</a></li>
-        ${employee.github ? `<li><span>Github:</span><a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a></li>` : '<li><span>School:</span>uofT</li>'}
+        <li><span>Name:</span>${employee.name.trim()}</li>
+        <li><span>Email:</span> <a href="mailto:${employee.email.trim()}">${employee.email.trim()}</a></li>
+        ${employee.github ? `<li><span>Github:</span><a href="https://github.com/${employee.github.trim()}" target="_blank">${employee.github.trim()}</a></li>` : `<li><span>School:</span>${employee.school.trim()}</li>`}
       </ul>
     </div>
  </div>`
