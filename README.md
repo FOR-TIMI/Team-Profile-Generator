@@ -1,6 +1,24 @@
-# Team-Profile-Generator--OOP
+<h1 align="center">Team Profile Generator</h1>
+
+<p align="center">
+ <img src="https://img.shields.io/badge/LESS-52B0E7?style=for-the-badge&logo=Less&logoColor=white" />
+ <img src="https://img.shields.io/badge/File_system-6DA55F?style=for-the-badge&logo=Node.js&logoColor=white" />
+ <img src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white"/>
+ <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Inquirer-52B0E7?style=for-the-badge&logo=Inquirer&logoColor=white" /> 
+</p>
 
 
+## Description
+This is a CMS that accepts user input and generates a nicely formatted team roster based on user input
+
+## Table of Content
+- [Purpose](#purpose)
+- [Project setup](#project-setup)
+- [Tools Used](#tools-used)
+- [Licenses](#licenses)
+- [Screenshots](#screenshots)
+- [Contribution](#contribution)
 
 ## Purpose
 This is a command line Application that accepts user input and generates a nicely formatted team roster based on user input
@@ -39,11 +57,10 @@ To run tests for this application with jest run in the terminal
 ```
 npm test
 ```
+ 
 
-   
 
-
-## Built With
+## Tools Used
 * NodeJs
 * HTML
 * CSS
@@ -52,8 +69,15 @@ npm test
 * LESS css preprocessor
 * Jest 
 
+## Licenses
+### MIT license
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/104241247/188397294-b207de93-ca77-4d9c-a614-61e0153ca457.png)
 ![image](https://user-images.githubusercontent.com/104241247/188397346-b6a27331-fc60-4987-8f83-f3677fd3255d.png)
 ![image](https://user-images.githubusercontent.com/104241247/188397403-992c830c-07bc-4927-9c1b-9f30921451bc.png)
+
+## Contribution
+Made with ❤️ by Timi
