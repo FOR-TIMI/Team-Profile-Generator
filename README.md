@@ -53,7 +53,7 @@ This is a command line Application that accepts user input and generates a nicel
 
 2. Clone this repo
 ```
-git clone https://github.com/FOR-TIMI/Team-Profile-Generator--OOP.git
+https://github.com/FOR-TIMI/Team-Profile-Generator.git
 ```
 3. Install all the dependencies of this repo by run in the terminal
 ```
